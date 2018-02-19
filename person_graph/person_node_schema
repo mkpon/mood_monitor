@@ -1,0 +1,39 @@
+-- person node schema
+
+-- personal information
+person_id: chararray
+name: chararray
+device_app_id: chararray
+contact_info: {}
+privacy_options: {}
+personal_relationships: [
+	(relationship: chararray, person_id),
+	...
+	]
+last_touched_datetime: datetime
+last_touched_reason: chararray
+
+-- We are following the person's mood or we are not
+mood_following: boolean
+
+-- Mood
+current_mood: chararray
+last_mood_change_time: datetime
+recent_mode_history (last 5 mood changes or moods in the last 1 hour): [
+	(mood_change_time: datetime),
+	...
+	]
+
+-- Location
+last_known_location: location_id
+last_known_location_time_datetime: datetime
+home: location_id
+work: location_id
+significant_locations: [
+	(significance: chararray, location_id),
+	...
+	]
+top_locations: [
+	(last_visited)
+	]
+	

@@ -1,0 +1,17 @@
+-- location_node_schema
+
+location_id: chararray
+public_location: boolean
+name: chararray
+address: {}
+activites: [
+	list of enumerated activities PRIVATE_ONLY, OFFICE, MEDICAL, PARK, RETAIL, INDUSTRIAL
+	]
+nearby_locations: [
+	(nearby_location: location_id, distance: integer),
+	...
+	]
+persons: [
+	person_id,
+	...
+	]

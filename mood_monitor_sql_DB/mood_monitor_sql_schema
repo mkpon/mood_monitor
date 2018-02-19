@@ -1,0 +1,43 @@
+-- User Table describes the user and his/her device
+User Table:
+person_id
+user_name
+password
+contact_info etc
+...
+device_spec_id
+OS
+OS_version
+serial_number
+installed_app_id
+app_version
+last_update (datetime)
+
+++++++++++++++
+
+App Table:
+app_id
+app_version
+app_name
+
+
+
++++++++++++++++
+
+Device_Configurations Table:
+
+device_configuration_id
+model
+make
+OS
+OS_version
+
+++++++++++++++++
+
+App_Device_Configurations_Join Table
+
++++++++++++++++++
+
+
+
+
